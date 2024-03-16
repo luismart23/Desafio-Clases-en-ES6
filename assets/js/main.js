@@ -1,3 +1,7 @@
+// no funciona si hago esto: import { Impuestos } from  "./impuestos.module.js"!!!!
+// pero de alguna forma se encuentra enlazado al type="module"
+// ya que si lo elimino falla el codigo.
+
 import { Impuestos } from "./impuestos.js"
 import { Cliente } from "./cliente.js"
 
