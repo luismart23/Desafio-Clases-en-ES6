@@ -3,6 +3,7 @@ export class Impuestos {
     #deducciones;
 
     constructor(montoBrutoAnual, deducciones) {
+
         this.#montoBrutoAnual = montoBrutoAnual;
         this.#deducciones = deducciones;
     }
@@ -21,9 +22,5 @@ export class Impuestos {
 
     set deducciones(nuevasDeducciones) {
         this.#deducciones = nuevasDeducciones;
-    }
-
-    calcularImpuesto() {
-        return (this.#montoBrutoAnual - this.#deducciones) * 0.21;
     }
 }

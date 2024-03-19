@@ -1,8 +1,10 @@
 export class Cliente {
+    // Propiedades privadas para el nombre y los impuestos
     #nombre;
     #impuestos;
 
     constructor(nombre, impuestos) {
+
         this.#nombre = nombre;
         this.#impuestos = impuestos;
     }
@@ -15,15 +17,8 @@ export class Cliente {
         this.#nombre = nuevoNombre;
     }
 
-    get impuestos() {
-        return this.#impuestos;
-    }
-
-    set impuestos(nuevosImpuestos) {
-        this.#impuestos = nuevosImpuestos;
-    }
-
+    // Método para calcular el impuesto a pagar
     calcularImpuesto() {
-        return this.#impuestos.calcularImpuesto();
+        return (this.#impuestos.montoBrutoAnual - this.#impuestos.deducciones) * 0.21;
     }
 }
